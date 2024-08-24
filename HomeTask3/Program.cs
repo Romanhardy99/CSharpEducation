@@ -9,6 +9,7 @@ namespace HomeTask3
     public class Program
     {
         #region Методы
+
         /// <summary>
         /// Точка входа в программу
         /// </summary>
@@ -138,6 +139,8 @@ namespace HomeTask3
                 Console.WriteLine("Абонент не найден");
             }
         }
+
         #endregion
+
     }
 }

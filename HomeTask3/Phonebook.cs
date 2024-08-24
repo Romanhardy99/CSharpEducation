@@ -17,6 +17,7 @@ namespace HomeTask3
         private readonly string filePath = "phonebook.txt";
 
         #region Конструктор
+
         /// <summary>
         /// Приватный конструктор.
         /// </summary>
@@ -26,13 +27,17 @@ namespace HomeTask3
 
             LoadFromFile();
         }
+
         #endregion
 
         #region Свойства
+
         public static Phonebook Instance => instance.Value; /// Свойство предоставляет доступ к единственному экземпляру класса при первом его создании.
+
         #endregion
 
         #region Методы
+
         /// <summary>
         /// Добавление абонента в справочник при отсутствии имени и номера.
         /// </summary>
@@ -123,7 +128,9 @@ namespace HomeTask3
 
             File.WriteAllLines(filePath, lines);
         }
+
         #endregion
+
     }
 }
 

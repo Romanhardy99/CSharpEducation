@@ -6,6 +6,7 @@
     public class Abonent
     {
         #region Свойства
+
         /// <summary>
         /// Имя абонента.
         /// </summary>
@@ -15,9 +16,11 @@
         /// Номер телефона абонента.
         /// </summary>
         public string PhoneNumber { get; set; }
+
         #endregion
 
         #region Конструктор
+
         /// <summary>
         /// Инициализируем экземпляр. 
         /// </summary>
@@ -28,9 +31,11 @@
             Name = name;
             PhoneNumber = phoneNumber;
         }
+
         #endregion
 
         #region Методы
+
         /// <summary>
         /// Проверяем равен ли текущий объект другому объекту по номеру телефона.
         /// </summary>
@@ -49,6 +54,8 @@
         {
             return PhoneNumber.GetHashCode();
         }
+
         #endregion
+
     }
 }

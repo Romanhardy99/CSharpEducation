@@ -48,7 +48,9 @@ namespace HomeTask2
                 }
             }
         }
+
         #region Методы 
+
         /// <summary>
         /// Отрисовка доски.
         /// </summary>
@@ -63,6 +65,7 @@ namespace HomeTask2
                     Console.WriteLine("---------");
             }
         }
+
         /// <summary>
         /// Проверка хода игрока.
         /// </summary>
@@ -101,6 +104,7 @@ namespace HomeTask2
                 }
             }
         }
+
         /// <summary>
         /// Смена сторон игроков.
         /// </summary>
@@ -108,6 +112,7 @@ namespace HomeTask2
         {
             Player = (Player == Player1) ? Player2 : Player1;
         }
+
         /// <summary>
         /// Проверка игроков на победу.
         /// </summary>
@@ -133,6 +138,7 @@ namespace HomeTask2
                 return true;
             return false;
         }
+
         /// <summary>
         /// Проверка свободного места на доске.
         /// </summary>
@@ -147,6 +153,8 @@ namespace HomeTask2
             }
             return true;
         }
+
         #endregion
+
     }
 }
