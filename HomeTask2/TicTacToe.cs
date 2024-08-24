@@ -68,9 +68,9 @@ namespace HomeTask2
         /// </summary>
         static void PlayerMove()
         {
-            bool validmove = false;
+            bool validMove = false;
 
-            while (!validmove)
+            while (!validMove)
             {
                 Console.WriteLine($"{Player} введите номер ячейки");
 
@@ -88,7 +88,7 @@ namespace HomeTask2
                     {
                         board[row, col] = Player;
 
-                        validmove = true;
+                        validMove = true;
                     }
                     else
                     {
@@ -136,7 +136,7 @@ namespace HomeTask2
         /// <summary>
         /// Проверка свободного места на доске.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>возвращает false если ячейки заняты</returns>
         static bool BoardFull()
         {
             for (int i = 0; i < 3; i++)
