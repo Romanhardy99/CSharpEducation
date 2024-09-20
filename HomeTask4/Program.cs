@@ -7,6 +7,7 @@ namespace HomeTask4
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             EmployeeManager<Employee> employeeManager = new EmployeeManager<Employee>();
 
             while (true)
@@ -65,6 +66,7 @@ namespace HomeTask4
                     {
 
                         Console.Write("Введите имя сотрудника: ");
+
                         string name = Console.ReadLine();
 
                         try
@@ -75,10 +77,13 @@ namespace HomeTask4
                             }
 
                             decimal salary;
+
                             while(true)
                             {
                                 Console.Write("Введите зарплату: ");
+
                                 string salaryInput = Console.ReadLine();
+
                                 if(decimal.TryParse(salaryInput, out salary) && salary > 0)
                                 {
                                     break;
@@ -90,12 +95,16 @@ namespace HomeTask4
                             }             
                             
                             FullTimeEmployee employee = new FullTimeEmployee(name, salary);
+
                             manager.Add(employee);
 
                             Console.WriteLine("Полный сотрудник добавлен");
+
                             Console.ReadKey();
+
                             break;
                         }
+
                         catch (Exception ex)
                         {
                             Console.WriteLine(ex.Message);
@@ -108,6 +117,7 @@ namespace HomeTask4
                     while (true)
                     {
                         Console.Write("Введите имя сотрудника: ");
+
                         string name = Console.ReadLine();
                         
                         try
@@ -118,10 +128,13 @@ namespace HomeTask4
                             }
 
                             decimal hourlyRate;
+
                             while(true)
                             {
                                 Console.Write("Введите почасовую ставку: ");
+
                                 string hourlyRateInput = Console.ReadLine();
+
                                 if (decimal.TryParse(hourlyRateInput, out hourlyRate) && hourlyRate > 0)
                                 {  
                                     break; 
@@ -131,11 +144,15 @@ namespace HomeTask4
                                     Console.WriteLine("Некорректное кол-во часов. Попробуйте снова.");
                                 }
                             }
+
                             int hoursWorked;
+
                             while(true) 
                             {
                                 Console.Write("Введите количество отработанных часов: ");
+
                                 string hoursWorkedInput = Console.ReadLine();
+
                                 if (int.TryParse(hoursWorkedInput, out hoursWorked) && hoursWorked > 0)
                                 {
                                     break;
@@ -146,10 +163,13 @@ namespace HomeTask4
                                 }
                             }
                             PartTimeEmployee employee = new PartTimeEmployee(name, hourlyRate, hoursWorked);
+
                             manager.Add(employee);
 
                             Console.WriteLine("Частичный сотрудник добавлен");
+
                             Console.ReadKey();
+
                             break;
                         }
                         catch(Exception ex) 
@@ -162,8 +182,11 @@ namespace HomeTask4
                 static void GetEmployeeInfo(EmployeeManager<Employee> manager)
                 {
                     Console.Write("Введите имя сотрудника: ");
+
                     string name = Console.ReadLine();
+
                     var employee = manager.Get(name);
+
                     if (employee != null)
                     {
                         Console.WriteLine(employee.ToString());
@@ -178,14 +201,19 @@ namespace HomeTask4
                 static void UpdateEmployee(EmployeeManager<Employee> manager)
                 {
                     Console.Write("Введите имя сотрудника для обновления: ");
+
                     string name = Console.ReadLine();
+
                     var employee = manager.Get(name);
 
                     if (employee != null)
                     {
                         Console.Write("Введите новую ЗП: ");
+
                         decimal newSalary = Convert.ToDecimal(Console.ReadLine());
+
                         employee.BaseSalary = newSalary;
+
                         manager.Update(employee);
                     }
                     else
@@ -198,8 +226,11 @@ namespace HomeTask4
                 static void DeleteEmployee(EmployeeManager<Employee> manager)
                 {
                     Console.Write("Введите имя сотрудника для удаления: ");
+
                     string name = Console.ReadLine();
+
                     var employee = manager.Get(name);
+
                     if (employee != null)
                     {
                         manager.Delete(employee);
@@ -214,6 +245,7 @@ namespace HomeTask4
                 static void ShowAllEmployee(EmployeeManager<Employee> manager)
                 {
                     var employees = manager.GetAll();
+
                     if (employees.Count == 0)
                     {
                         Console.WriteLine("Нет сотрудников.");
@@ -221,6 +253,7 @@ namespace HomeTask4
                     else
                     {
                         Console.WriteLine("Сотрудники: ");
+
                         foreach (var employee in employees)
                         {
                             Console.WriteLine(employee.ToString());
