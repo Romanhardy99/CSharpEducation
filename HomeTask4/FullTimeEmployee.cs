@@ -6,8 +6,27 @@ using System.Threading.Tasks;
 
 namespace HomeTask4
 {
+    /// <summary>
+    /// Класс представляющий полного сотрудника.
+    /// Наследует функциональность от класса Employee и реализует мeтоды для расчета зарплаты и представления информации о сотруднике.
+    /// </summary>
     public class FullTimeEmployee : Employee
     {
+
+        #region Базовый класс
+
+        public override decimal CalculateSalary()
+        {
+            return BaseSalary;
+        }
+
+        public override string ToString()
+        {
+            return $"Имя: {Name} Зарплата: {BaseSalary:C}";
+        }
+
+        #endregion
+
         #region Конструктор
 
         /// <summary>
@@ -18,28 +37,5 @@ namespace HomeTask4
         public FullTimeEmployee(string name, decimal baseSalary) : base(name, baseSalary) { }
 
         #endregion
-
-        #region Методы
-
-        /// <summary>
-        /// Расчитывает зарплату полного сотрудника.
-        /// </summary>
-        /// <returns>Базовая запрлата сотрудника.</returns>
-        public override decimal CalculateSalary()
-        {
-            return BaseSalary;
-        }
-
-        /// <summary>
-        /// Возвращает строкое представление информации о полном сотруднике.
-        /// </summary>
-        /// <returns>Строка с именем и зарплатой сотрудника.</returns>
-        public override string ToString()
-        {
-            return $"Имя: {Name} Зарплата: {BaseSalary:C}";
-        }
-
-        #endregion
-
     }
 }

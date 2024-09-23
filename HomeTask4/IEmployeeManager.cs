@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace HomeTask4
 {
+    /// <summary>
+    /// Интерфейс для управления сотрудниками.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IEmployeeManager<T> where T : Employee
     {
         #region Методы

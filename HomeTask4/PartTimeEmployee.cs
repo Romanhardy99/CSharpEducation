@@ -7,12 +7,37 @@ using System.Threading.Tasks;
 
 namespace HomeTask4
 {
+    /// <summary>
+    /// Класс представляющий частичного сотрудника.
+    /// Наследует функциональность от класса Employee и добавляет свойства для почасовой ставки и отработанных часов.
+    /// </summary>
     public class PartTimeEmployee : Employee
     {
-        #region Свойства
+        #region Поля и свойства
 
+        /// <summary>
+        /// Свойство, представляющее почасовую ставку частичного сотрудника.
+        /// </summary>
         public decimal HourlyRate { get; set; }
+
+        /// <summary>
+        /// Свойство, представляющее количество отработанных часов частичного сотрудника.
+        /// </summary>
         public int HoursWorked { get; set; }
+
+        #endregion
+
+        #region Базовый класс
+
+        public override decimal CalculateSalary()
+        {
+            return HourlyRate * HoursWorked;
+        }
+
+        public override string ToString()
+        {
+            return $"Имя: {Name}, Отработанное время: {HoursWorked}, Почасовая ставка {HourlyRate}, Зарплата: {CalculateSalary():C}";
+        }
 
         #endregion
 
@@ -29,28 +54,6 @@ namespace HomeTask4
             HourlyRate = hourlyRate;
 
             HoursWorked = hoursWorked;
-        }
-
-        #endregion
-
-        #region Методы
-
-        /// <summary>
-        /// Рассчитывает зарплату частичного сотрудника.
-        /// </summary>
-        /// <returns>Произведение почасовой ставки на количество отработанных часов.</returns>
-        public override decimal CalculateSalary()
-        {
-            return HourlyRate * HoursWorked;
-        }
-
-        /// <summary>
-        /// Возвращает строковое представление информации о частичном сотруднике.
-        /// </summary>
-        /// <returns>Строка с именем, количеством отработанных часов, почасовой ставкой и зарплатой.</returns>
-        public override string ToString()
-        {
-            return $"Имя: {Name}, Отработанное время: {HoursWorked}, Почасовая ставка {HourlyRate}, Зарплата: {CalculateSalary():C}";
         }
 
         #endregion

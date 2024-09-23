@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace HomeTask4
 {
+    /// <summary>
+    /// Менеджер для управления списком сотрудников.
+    /// Наследуется от интерфейса и реализует его методы.
+    /// Позволяет добавлять, обновлять, удалять и получать информацию о сотрудниках.
+    /// </summary>
+    /// <typeparam name="T">Тип сотрудника, который должен наследовать класс Employee</typeparam>
     public class EmployeeManager<T> : IEmployeeManager<T> where T : Employee
     {
-        #region Поле
+        #region Поля и свойства
 
         private List<T> employees = new List<T>();
 
@@ -17,7 +23,7 @@ namespace HomeTask4
         #region Методы
 
         /// <summary>
-        /// Добавляет сотрудника в списке.
+        /// Добавляет сотрудника в список.
         /// </summary>
         /// <param name="employee">Сотрудник для добавления.</param>
         public void Add(T employee)

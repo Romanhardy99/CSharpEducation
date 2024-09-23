@@ -2,8 +2,15 @@
 
 namespace HomeTask4
 {
+    /// <summary>
+    /// Основной класс для управления сотрудниками.
+    /// </summary>
     internal class Program
     {
+        /// <summary>
+        /// Точка входа
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -199,7 +206,7 @@ namespace HomeTask4
         }
 
         /// <summary>
-        /// Получение инфы от сотруднике.
+        /// Получение инфы о сотруднике.
         /// </summary>
         /// <param name="manager">Менеджер сотрудников.</param>
         static void GetEmployeeInfo(EmployeeManager<Employee> manager)

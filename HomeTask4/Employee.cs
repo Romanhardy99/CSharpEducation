@@ -6,28 +6,22 @@ using System.Threading.Tasks;
 
 namespace HomeTask4
 {
+    /// <summary>
+    ///  Базовый класс сотрудник.
+    /// </summary>
     public abstract class Employee
     {
-        #region Свойства
-
-        public string Name { get; set; }
-        public decimal BaseSalary { get; set; }
-
-        #endregion
-
-        #region Конструктор
+        #region Поля и свойства
 
         /// <summary>
-        /// Конструктор.
+        /// Свойство имя.
         /// </summary>
-        /// <param name="name">Имя сотрудника.</param>
-        /// <param name="baseSalary">Базовая зп сотрудника.</param>
-        public Employee(string name, decimal baseSalary)
-        {
-            Name = name;
+        public string Name { get; set; }
 
-            BaseSalary = baseSalary;
-        }
+        /// <summary>
+        /// Свойство базовая зарплата.
+        /// </summary>
+        public decimal BaseSalary { get; set; }
 
         #endregion
 
@@ -44,6 +38,22 @@ namespace HomeTask4
         /// </summary>
         /// <returns>Строковое представление сотрудника.</returns>
         public abstract override string ToString();
+
+        #endregion
+
+        #region Конструктор
+
+        /// <summary>
+        /// Конструктор.
+        /// </summary>
+        /// <param name="name">Имя сотрудника.</param>
+        /// <param name="baseSalary">Базовая зп сотрудника.</param>
+        public Employee(string name, decimal baseSalary)
+        {
+            Name = name;
+
+            BaseSalary = baseSalary;
+        }
 
         #endregion
     }
