@@ -7,19 +7,20 @@ using System.Threading.Tasks;
 namespace HomeTask4
 {
     /// <summary>
-    ///  Базовый класс сотрудник.
+    ///  Класс для представления сотрудника в системе управления сотрудниками.
+    ///  Обеспечивает основные свойства и методы для расчета зарплаты и отображения информации о сотруднике.
     /// </summary>
     public abstract class Employee
     {
         #region Поля и свойства
 
         /// <summary>
-        /// Свойство имя.
+        /// Получает или задаёт имя сотрудника.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Свойство базовая зарплата.
+        /// Получает или задаёт базовую зарплату сотрудника.
         /// </summary>
         public decimal BaseSalary { get; set; }
 
@@ -28,23 +29,17 @@ namespace HomeTask4
         #region Методы
 
         /// <summary>
-        /// Абстрактный метод для расчета зарплаты сотрудника.
+        /// Расчитывает зарплату сотрудникам
         /// </summary>
         /// <returns>Зарплата сотрудника.</returns>
         public abstract decimal CalculateSalary();
-
-        /// <summary>
-        /// Переопределение метода для отображения информации о сотруднике.
-        /// </summary>
-        /// <returns>Строковое представление сотрудника.</returns>
-        public abstract override string ToString();
 
         #endregion
 
         #region Конструктор
 
         /// <summary>
-        /// Конструктор.
+        /// Инициализирует новый экземпляр класса сотрудника с заданным именем и базовой зарплатой.
         /// </summary>
         /// <param name="name">Имя сотрудника.</param>
         /// <param name="baseSalary">Базовая зп сотрудника.</param>

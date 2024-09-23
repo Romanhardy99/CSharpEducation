@@ -16,12 +16,12 @@ namespace HomeTask4
         #region Поля и свойства
 
         /// <summary>
-        /// Свойство, представляющее почасовую ставку частичного сотрудника.
+        /// Почасовая ставка частичного сотрудника.
         /// </summary>
         public decimal HourlyRate { get; set; }
 
         /// <summary>
-        /// Свойство, представляющее количество отработанных часов частичного сотрудника.
+        /// Количество отработанных часов частичного сотрудника.
         /// </summary>
         public int HoursWorked { get; set; }
 
@@ -44,11 +44,11 @@ namespace HomeTask4
         #region Конструктор
 
         /// <summary>
-        /// Конструктор для создания частичного сотрудника.
+        /// Инициализирует новый экземпляр частичного сотрудника с заданными именем, почасовой ставкой и количеством отработанных часов.
         /// </summary>
         /// <param name="name">Имя сотрудника.</param>
-        /// <param name="hourlyRate">Почасовая ставка.</param>
-        /// <param name="hoursWorked">Количество отработанных часов.</param>
+        /// <param name="hourlyRate">Почасовая ставка частичного сотрудника.</param>
+        /// <param name="hoursWorked">Количество отработанных часов частичного сотрудника.</param>
         public PartTimeEmployee(string name, decimal hourlyRate, int hoursWorked) : base(name, 0)
         {
             HourlyRate = hourlyRate;

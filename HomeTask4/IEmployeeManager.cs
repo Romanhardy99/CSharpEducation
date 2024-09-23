@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace HomeTask4
 {
     /// <summary>
-    /// Интерфейс для управления сотрудниками.
+    /// Интерфейс для управления сотрудниками, включая добавление, получение, обновление и удаление.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Тип сотрудника, производный от класса Employee.</typeparam>
     public interface IEmployeeManager<T> where T : Employee
     {
         #region Методы
