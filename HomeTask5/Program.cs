@@ -1,7 +1,18 @@
 ﻿namespace HomeTask5
 {
+    /// <summary>
+    /// Основной класс для управления пользователями.
+    /// </summary>
     internal class Program
     {
+
+        #region Методы
+
+        /// <summary>
+        /// Главный метод прилоежния.
+        /// Инициализирует экземпляр UserManager и запускает пользовательский интерфейс.
+        /// </summary>
+        /// <param name="args">Аргументы командной строки.</param>
         static void Main(string[] args)
         {
 
@@ -11,6 +22,11 @@
 
         }
 
+        /// <summary>
+        /// Интерфейс пользователя.
+        /// Отображает меню для взаимодействия с пользователями.
+        /// </summary>
+        /// <param name="userManager">Используемый для управления пользователями.</param>
         public static void UserInterface(UserManager userManager)
         {
             while (true)
@@ -63,6 +79,12 @@
             }
         }
 
+        /// <summary>
+        /// Добавление пользователя в систему.
+        /// Запрашивает у пользователя id, имя и почту для создания нового пользователя.
+        /// Обрабатывает исключения.
+        /// </summary>
+        /// <param name="userManager">Объект используется для управления и добавления нового пользователя.</param></param>
         public static void AddUser(UserManager userManager)
         {
             try
@@ -99,6 +121,12 @@
             }
         }
 
+        /// <summary>
+        /// Удаляет пользователя из системы.
+        /// Запрашивает id для поиска пользователя.
+        /// Обрабатывает исключения.
+        /// </summary>
+        /// <param name="userManager">Объект для управления и удаления пользователя.</param>
         public static void RemoveUser(UserManager userManager)
         {
             try
@@ -125,6 +153,12 @@
             }
         }
 
+        /// <summary>
+        /// Поиск пользователя в системе.
+        /// Запрашивает id для поиска пользователя.
+        /// Обрабатывает исключения.
+        /// </summary>
+        /// <param name="userManager">Объект для управления и поиска пользователя в системе.</param>
         public static void GetUser(UserManager userManager)
         {
             try
@@ -151,6 +185,11 @@
             }
         }
 
+        /// <summary>
+        /// Отображение всех пользователей в системе.
+        /// Обрабатывает исключение.
+        /// </summary>
+        /// <param name="userManager"></param>
         public static void ListUsers(UserManager userManager)
         {
             try
@@ -162,6 +201,8 @@
                 Console.WriteLine($"Ошибка при отображении списка пользователй: {ex.Message}");
             }
         }
+
+        #endregion
 
     }
 }

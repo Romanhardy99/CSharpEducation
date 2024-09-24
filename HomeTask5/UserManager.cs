@@ -6,10 +6,27 @@ using System.Threading.Tasks;
 
 namespace HomeTask5
 {
+    /// <summary>
+    /// Менеджер для управления пользователем.
+    /// Позволяет добавлять, удалять, получать информацию о пользователе и выводить список.
+    /// </summary>
     internal class UserManager
     {
+
+        #region Поля и свойства
+        
         List<User> users = new List<User>();
 
+        #endregion
+
+        #region Методы
+
+        /// <summary>
+        /// Добавляет пользователя в список.
+        /// </summary>
+        /// <param name="user">Пользователь для добавления.</param>
+        /// <exception cref="UserAlreadyExistsException">Исключение, выбрасываемое при попытке добавить пользователя с уже существующим 
+        /// идентификатором в список.</exception>
         public void AddUser(User user)
         {
             if (users.Exists(u => u.Id == user.Id))
@@ -19,6 +36,11 @@ namespace HomeTask5
             this.users.Add(user);
         }
 
+        /// <summary>
+        /// Удаляет пользователя из списка.
+        /// </summary>
+        /// <param name="id">Идентификатор для поиска пользователя.</param>
+        /// <exception cref="UserNotFoundException">Исключение, выбрасываемое, когда пользователь с указанным идентификатором не найден.</exception>
         public void RemoveUser(int id)
         {
             User user = users.Find(u => u.Id == id);
@@ -30,6 +52,12 @@ namespace HomeTask5
             this.users.Remove(user);
         }
 
+        /// <summary>
+        /// Поиск пользователя по id
+        /// </summary>
+        /// <param name="id">Идентификатор для поиска пользователя.</param>
+        /// <returns></returns>
+        /// <exception cref="UserNotFoundException">Исключение, выбрасываемое, когда пользователь с указанным идентификатором не найден.</exception>
         public User GetUser(int id)
         {
             User user = users.Find(user => user.Id == id);
@@ -41,6 +69,10 @@ namespace HomeTask5
             return user;
         }
 
+        /// <summary>
+        /// Отображение всех пользователей добавленных в список.
+        /// Если список пуст, выводит сообщение.
+        /// </summary>
         public void ListUsers()
         {
             if (users.Count == 0)
@@ -53,5 +85,8 @@ namespace HomeTask5
                 Console.WriteLine($"Пользователь: {user.Id}, {user.Name}, {user.Email}");
             }
         }
+
+        #endregion
+
     }
 }
