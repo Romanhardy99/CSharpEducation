@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask5
 {
-    internal class UserAlreadyExistsException : ArgumentException
+    internal class UserAlreadyExistsException : Exception
     {
+        public UserAlreadyExistsException(string message)
+        : base(message) { }
     }
 }

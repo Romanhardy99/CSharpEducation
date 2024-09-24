@@ -10,50 +10,48 @@ namespace HomeTask5
     {
         List<User> users = new List<User>();
 
-        public void Add(User user)
+        public void AddUser(User user)
         {
-            if (user == null)
+            if (users.Exists(u => u.Id == user.Id))
             {
-                this.users.Add(user);
+                throw new UserAlreadyExistsException("Пользователь с таким id существует.");
             }
-            else
-            {
-                throw new ArgumentNullException("Пользователь с таким id существует");
-            }
+            this.users.Add(user);
         }
 
         public void RemoveUser(int id)
         {
-            try
-            {
-                var user = users.FirstOrderDefault(users => users.Id == id);
+            User user = users.Find(u => u.Id == id);
 
-                if (user == null)
-                {
-                    throw new ArgumentNullException("Пользователь не найден");
-                }
-                users.Remove(user);
-                Console.WriteLine("Пользователь удален");
-            }
-            catch (KeyNotFoundException)
+            if (user == null)
             {
-                Console.WriteLine(ex.Message);
+                throw new UserNotFoundException("Пользователь не найден.");
             }
-            catch (Exception)
-            {
-                Console.WriteLine("Ошибка при удалении");
-            }
-            return;
+            this.users.Remove(user);
         }
 
-        public void GetUser(int id)
+        public User GetUser(int id)
         {
-            return;
+            User user = users.Find(user => user.Id == id);
+
+            if (user == null)
+            {
+                throw new UserNotFoundException("Пользователь не найден.");
+            }
+            return user;
         }
 
-        public List<User> GetAllUser()
+        public void ListUsers()
         {
-            return this.users;
+            if (users.Count == 0)
+            {
+                Console.WriteLine("Нет пользователей в списке.");
+                return;
+            }
+            foreach (User user in users)
+            {
+                Console.WriteLine($"Пользователь: {user.Id}, {user.Name}, {user.Email}");
+            }
         }
     }
 }

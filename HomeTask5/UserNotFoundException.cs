@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask5
 {
-    internal class UserNotFoundException : ArgumentException
+    internal class UserNotFoundException : Exception
     {
+        public UserNotFoundException(string message)
+        : base(message) { }
     }
 }
