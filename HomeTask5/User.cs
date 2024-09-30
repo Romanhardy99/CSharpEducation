@@ -7,35 +7,34 @@ using System.Threading.Tasks;
 namespace HomeTask5
 {
     /// <summary>
-    /// Класс для представления пользователя в системе управления пользователями.
+    /// Пользователь.
     /// Обеспечивает основные свойства и методы для управления и отображения информации пользователя.
     /// </summary>
     internal class User
     {
-        
         #region Поля и свойства
 
         /// <summary>
-        /// Получает или устанавливает идентификатор пользователя.
+        /// Идентификатор пользователя.
         /// </summary>
         public int Id { get; set; }
-        
+
         /// <summary>
-        /// Получает или устанавливает имя пользователя.
+        /// Имя пользователя.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Получает или устанавливает почтовый адрес пользователя.
+        /// Почта пользователя.
         /// </summary>
         public string Email { get; set; }
 
         #endregion
 
-        #region Конструктор
+        #region Конструкторы
 
         /// <summary>
-        /// Инициализирует новый экземпляр пользователя с заданным id, именем и почтой.
+        /// Конструктор.
         /// </summary>
         /// <param name="id">Идентификатор пользователя.</param>
         /// <param name="name">Имя пользователя.</param>
@@ -43,9 +42,7 @@ namespace HomeTask5
         public User(int id, string name, string email)
         {
             this.Id = id;
-
             this.Name = name;
-
             this.Email = email;
         }
 

@@ -12,17 +12,19 @@ namespace HomeTask5
     /// </summary>
     internal class UserManager
     {
-
         #region Поля и свойства
-        
-        List<User> users = new List<User>();
+
+        /// <summary>
+        /// Коллекция.
+        /// </summary>
+        private List<User> users = new List<User>();
 
         #endregion
 
         #region Методы
 
         /// <summary>
-        /// Добавляет пользователя в список.
+        /// Добавить пользователя.
         /// </summary>
         /// <param name="user">Пользователь для добавления.</param>
         /// <exception cref="UserAlreadyExistsException">Исключение, выбрасываемое при попытке добавить пользователя с уже существующим 
@@ -31,13 +33,13 @@ namespace HomeTask5
         {
             if (users.Exists(u => u.Id == user.Id))
             {
-                throw new UserAlreadyExistsException("Пользователь с таким id существует.");
+                throw new UserAlreadyExistsException($"Пользователь с id {user.Id} существует.");
             }
             this.users.Add(user);
         }
 
         /// <summary>
-        /// Удаляет пользователя из списка.
+        /// Удалить пользователя.
         /// </summary>
         /// <param name="id">Идентификатор для поиска пользователя.</param>
         /// <exception cref="UserNotFoundException">Исключение, выбрасываемое, когда пользователь с указанным идентификатором не найден.</exception>
@@ -53,7 +55,7 @@ namespace HomeTask5
         }
 
         /// <summary>
-        /// Поиск пользователя по id
+        /// Получить пользователя по ID.
         /// </summary>
         /// <param name="id">Идентификатор для поиска пользователя.</param>
         /// <returns></returns>
@@ -70,7 +72,7 @@ namespace HomeTask5
         }
 
         /// <summary>
-        /// Отображение всех пользователей добавленных в список.
+        /// Отобразить всех пользователей.
         /// Если список пуст, выводит сообщение.
         /// </summary>
         public void ListUsers()

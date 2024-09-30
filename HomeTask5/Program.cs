@@ -5,7 +5,6 @@
     /// </summary>
     internal class Program
     {
-
         #region Методы
 
         /// <summary>
@@ -15,11 +14,9 @@
         /// <param name="args">Аргументы командной строки.</param>
         static void Main(string[] args)
         {
-
             UserManager userManager = new UserManager();
 
             UserInterface(userManager);
-
         }
 
         /// <summary>

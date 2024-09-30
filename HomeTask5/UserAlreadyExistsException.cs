@@ -16,6 +16,6 @@ namespace HomeTask5
         /// </summary>
         /// <param name="message">Сообщение описывающий исключение.</param>
         public UserAlreadyExistsException(string message)
-        : base(message) { }
+            : base(message) { }
     }
 }
