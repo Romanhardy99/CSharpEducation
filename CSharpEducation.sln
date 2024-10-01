@@ -8,6 +8,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask3", "HomeTask3\Home
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask2", "HomeTask2\HomeTask2.csproj", "{0E83D328-3A7C-4466-85FF-A86F1A8C230A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask4", "HomeTask4\HomeTask4.csproj", "{87C5B412-2E91-44F2-B233-3078A97D0919}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask5", "HomeTask5\HomeTask5.csproj", "{F5884178-06C4-4651-A24B-BD7922DB954D}"
 EndProject
 Global
