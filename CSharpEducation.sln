@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeTask1", "HomeTask1", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeTask2", "HomeTask2", "{10AD7579-EB05-458D-90F2-D183D9C7E31A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomwTask3", "HomwTask3", "{0D311895-9C4C-4F67-BB09-EC804586EC93}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeTask3", "HomeTask3", "{0D311895-9C4C-4F67-BB09-EC804586EC93}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeTask4", "HomeTask4", "{74BE3161-CF9E-4E8B-BEB5-FA6F18E96B88}"
 EndProject
@@ -26,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeTask6", "HomeTask6", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook", "HomeTask6\Phonebook\Phonebook.csproj", "{73991719-4218-4F59-89FA-3D522518C685}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.Tests", "HomeTask6\Phonebook.Tests\Phonebook.Tests.csproj", "{4FD36773-29B2-405A-B686-534CEDE78C5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook.Tests", "HomeTask6\Phonebook.Tests\Phonebook.Tests.csproj", "{4FD36773-29B2-405A-B686-534CEDE78C5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
