@@ -26,8 +26,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeTask6", "HomeTask6", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook", "HomeTask6\Phonebook\Phonebook.csproj", "{73991719-4218-4F59-89FA-3D522518C685}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook.Tests", "HomeTask6\Phonebook.Tests\Phonebook.Tests.csproj", "{4FD36773-29B2-405A-B686-534CEDE78C5B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,10 +56,6 @@ Global
 		{73991719-4218-4F59-89FA-3D522518C685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73991719-4218-4F59-89FA-3D522518C685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73991719-4218-4F59-89FA-3D522518C685}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FD36773-29B2-405A-B686-534CEDE78C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FD36773-29B2-405A-B686-534CEDE78C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FD36773-29B2-405A-B686-534CEDE78C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FD36773-29B2-405A-B686-534CEDE78C5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,7 +67,6 @@ Global
 		{87C5B412-2E91-44F2-B233-3078A97D0919} = {74BE3161-CF9E-4E8B-BEB5-FA6F18E96B88}
 		{F5884178-06C4-4651-A24B-BD7922DB954D} = {FB90CEDA-232D-4E55-9124-2B2D838E38ED}
 		{73991719-4218-4F59-89FA-3D522518C685} = {9E58BB31-C115-4024-86B9-0A9C6AF66B78}
-		{4FD36773-29B2-405A-B686-534CEDE78C5B} = {9E58BB31-C115-4024-86B9-0A9C6AF66B78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9A05E591-A604-4525-BAFC-33F7E82FDA88}
