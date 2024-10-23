@@ -14,11 +14,15 @@ public static class PhoneNumberValidator
   /// <exception cref="ArgumentException">Возникает, если номер телефона не в корректном формате.</exception>
   public static void Validate(PhoneNumber number)
   {
-    var regex = new Regex(@"^\+\d{1,3}\s?\(\d{3}\)\s?\d{3}-\d{4}$");
-    var isValid  = regex.IsMatch(number.Number);
-    if (isValid)
-      throw new ArgumentException("Phone number is invalid");
-  }
+        var regex = new Regex(@"^\+\d{1,3}\s?\(\d{3}\)\s?\d{3}-\d{4}$");
+        var isValid = regex.IsMatch(number.Number);
+
+        // Измените условие на выброс исключения, если номер невалидный
+        if (!isValid)
+        {
+            throw new ArgumentException("Phone number is invalid");
+        }
+    }
 
   /// <summary>
   /// Валидировать список номеров телефонов.
