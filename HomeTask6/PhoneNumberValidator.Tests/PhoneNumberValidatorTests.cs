@@ -47,7 +47,7 @@ namespace PhoneNumberValidatorTests
             var mixedNumbers = new List<PhoneNumber>
             {
                 new PhoneNumber("+1 (234) 567-8901", PhoneNumberType.Mobile),
-                new PhoneNumber("1234567890", PhoneNumberType.Mobile) // Некорректный номер
+                new PhoneNumber("1234567890", PhoneNumberType.Mobile) 
             };
 
             // Act & Assert
