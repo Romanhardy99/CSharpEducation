@@ -5,13 +5,18 @@
 /// </summary>
 public enum PhoneNumberType
 {
-  /// <summary>
-  /// Домашний номер.
-  /// </summary>
-  Personal,
+    /// <summary>
+    /// Домашний номер.
+    /// </summary>
+    Personal,
 
-  /// <summary>
-  /// Рабочий номер телефона.
-  /// </summary>
-  Work
+    /// <summary>
+    /// Рабочий номер телефона.
+    /// </summary>
+    Work,
+
+    /// <summary>
+    /// Мобильный номер.
+    /// </summary>
+    Mobile // Добавил новый тип
 }
