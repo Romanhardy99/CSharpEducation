@@ -30,9 +30,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook.Tests", "HomeTask
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumber.Tests", "HomeTask6\PhoneNumber.Tests\PhoneNumber.Tests.csproj", "{2B570DC7-9953-4447-805B-C6166A1EBB22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumberType.Tests", "HomeTask6\PhoneNumberTypeTests\PhoneNumberType.Tests.csproj", "{652396FE-2C4B-4DBA-BD7E-2A164E30CE43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberType.Tests", "HomeTask6\PhoneNumberTypeTests\PhoneNumberType.Tests.csproj", "{652396FE-2C4B-4DBA-BD7E-2A164E30CE43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumberValidator.Tests", "HomeTask6\PhoneNumberValidatorTests\PhoneNumberValidator.Tests.csproj", "{BE5E1EF0-6852-4FD2-80A9-9842A39FC3A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberValidator.Tests", "HomeTask6\PhoneNumberValidatorTests\PhoneNumberValidator.Tests.csproj", "{BE5E1EF0-6852-4FD2-80A9-9842A39FC3A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subscriber.Tests", "HomeTask6\Subscriber.Tests\Subscriber.Tests.csproj", "{35BCFD63-446F-4E64-B6E8-8C34CB43D10E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +82,10 @@ Global
 		{BE5E1EF0-6852-4FD2-80A9-9842A39FC3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE5E1EF0-6852-4FD2-80A9-9842A39FC3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE5E1EF0-6852-4FD2-80A9-9842A39FC3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BCFD63-446F-4E64-B6E8-8C34CB43D10E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BCFD63-446F-4E64-B6E8-8C34CB43D10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BCFD63-446F-4E64-B6E8-8C34CB43D10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BCFD63-446F-4E64-B6E8-8C34CB43D10E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{2B570DC7-9953-4447-805B-C6166A1EBB22} = {9E58BB31-C115-4024-86B9-0A9C6AF66B78}
 		{652396FE-2C4B-4DBA-BD7E-2A164E30CE43} = {9E58BB31-C115-4024-86B9-0A9C6AF66B78}
 		{BE5E1EF0-6852-4FD2-80A9-9842A39FC3A4} = {9E58BB31-C115-4024-86B9-0A9C6AF66B78}
+		{35BCFD63-446F-4E64-B6E8-8C34CB43D10E} = {9E58BB31-C115-4024-86B9-0A9C6AF66B78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9A05E591-A604-4525-BAFC-33F7E82FDA88}

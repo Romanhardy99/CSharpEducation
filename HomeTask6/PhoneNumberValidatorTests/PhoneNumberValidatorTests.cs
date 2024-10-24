@@ -1,10 +1,9 @@
 using Phonebook;
-using NUnit.Framework;
 
 namespace PhoneNumberValidatorTests
 {
     [TestFixture]
-    public class Tests 
+    public class PhoneNumberValidatorTests 
     {
         [Test]
         public void Validate_ShouldNotThrow_WhenNumberIsValid()

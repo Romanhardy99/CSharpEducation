@@ -1,11 +1,10 @@
 using Phonebook;
-using NUnit.Framework;
 
 namespace PhoneNumberTypeTests
 {
     
     [TestFixture]
-    public class Tests
+    public class PhoneNumberTypeTests
     {
         [Test]
         public void PhoneNumberType_ShouldHaveExpectedValues()

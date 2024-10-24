@@ -1,12 +1,11 @@
 using Phonebook;
-using NUnit.Framework;
 using System.Reflection.Metadata;
 
 namespace PhoneNumber.Tests
 {
 
     [TestFixture]
-    public class Tests
+    public class PhoneNumberTests
     {
         [Test]
         public void Constructor_ShouldInitializeProperties()

@@ -18,5 +18,5 @@ public enum PhoneNumberType
     /// <summary>
     /// Мобильный номер.
     /// </summary>
-    Mobile // Добавляем новый тип
+    Mobile // Добавил новый тип
 }
