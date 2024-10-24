@@ -3,7 +3,7 @@ using Phonebook;
 namespace PhoneNumberValidatorTests
 {
     [TestFixture]
-    public class PhoneNumberValidatorTests 
+    public class PhoneNumberValidatorTests
     {
         [Test]
         public void Validate_ShouldNotThrow_WhenNumberIsValid()

@@ -2,7 +2,7 @@ using Phonebook;
 
 namespace PhoneNumberTypeTests
 {
-    
+
     [TestFixture]
     public class PhoneNumberTypeTests
     {
