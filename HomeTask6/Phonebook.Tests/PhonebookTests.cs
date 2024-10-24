@@ -99,7 +99,7 @@ public class PhonebookTests
     {
         // Arrange
         var subscriber = new Subscriber(Guid.NewGuid(), "Egor", new List<PhoneNumber>());
-        var newNumber = new PhoneNumber("1234567890", PhoneNumberType.Mobile); // Исправление: передача номера и типа
+        var newNumber = new PhoneNumber("1234567890", PhoneNumberType.Mobile); 
         this.phonebook.AddSubscriber(subscriber);
 
         // Act
